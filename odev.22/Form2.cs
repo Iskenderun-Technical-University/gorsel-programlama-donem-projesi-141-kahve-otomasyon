@@ -25,11 +25,19 @@ namespace odev._22
         private void gunaComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            
         }
 
         private void gunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (gunaDataGridView1.CurrentRow != null);
+            {
+                idText.Text = gunaDataGridView1.CurrentRow.Cells[0].Value.ToString();
+                nameCombo.Text = gunaDataGridView1.CurrentRow.Cells[1].Value.ToString();
+                typeCombo.Text = gunaDataGridView1.CurrentRow.Cells[2].Value.ToString();
+                quanityCombo.Text = gunaDataGridView1.CurrentRow.Cells[3].Value.ToString();
+                paymentText.Text = gunaDataGridView1.CurrentRow.Cells[4].Value.ToString();
+            }
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)
@@ -94,7 +102,7 @@ namespace odev._22
         private void gunaButton2_Click(object sender, EventArgs e)
         {
             idText.Text = "";
-            nameCombo.Text = "";
+            nameCombo.SelectedIndex = -1;
             typeCombo.SelectedIndex = -1;
             quanityCombo.SelectedIndex = -1;
             paymentText.Text = "";
@@ -104,6 +112,14 @@ namespace odev._22
         private void gunaCirclePictureBox1_Click(object sender, EventArgs e)
         {
            this.Close();
+        }
+
+        private void gunaButton3_Click(object sender, EventArgs e)
+        {
+            if(gunaDataGridView1.CurrentRow != null)
+            {
+                gunaDataGridView1.Rows.Remove(gunaDataGridView1.CurrentRow);
+            }
         }
     }
 }
