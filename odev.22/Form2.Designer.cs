@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,10 +58,11 @@
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
+            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaElipsePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -93,6 +95,32 @@
             this.gunaElipsePanel1.Radius = 25;
             this.gunaElipsePanel1.Size = new System.Drawing.Size(945, 499);
             this.gunaElipsePanel1.TabIndex = 0;
+            // 
+            // gunaButton3
+            // 
+            this.gunaButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaButton3.AnimationSpeed = 0.03F;
+            this.gunaButton3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton3.BaseColor = System.Drawing.Color.Red;
+            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gunaButton3.ForeColor = System.Drawing.Color.White;
+            this.gunaButton3.Image = null;
+            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton3.Location = new System.Drawing.Point(463, 111);
+            this.gunaButton3.Name = "gunaButton3";
+            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton3.OnHoverImage = null;
+            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton3.Radius = 8;
+            this.gunaButton3.Size = new System.Drawing.Size(119, 42);
+            this.gunaButton3.TabIndex = 5;
+            this.gunaButton3.Text = "     SİL";
+            this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
             // gunaButton2
             // 
@@ -160,21 +188,21 @@
             // gunaDataGridView1
             // 
             this.gunaDataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.gunaDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gunaDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunaDataGridView1.BackgroundColor = System.Drawing.Color.BlanchedAlmond;
             this.gunaDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gunaDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gunaDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gunaDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gunaDataGridView1.ColumnHeadersHeight = 15;
             this.gunaDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -182,14 +210,14 @@
             this.tayp,
             this.quanity,
             this.pament});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gunaDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.gunaDataGridView1.EnableHeadersVisualStyles = false;
             this.gunaDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.gunaDataGridView1.Location = new System.Drawing.Point(55, 168);
@@ -472,39 +500,27 @@
             // 
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox1.Image")));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(907, 0);
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(916, 9);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(43, 42);
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(33, 29);
             this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaCirclePictureBox1.TabIndex = 2;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
             this.gunaCirclePictureBox1.Click += new System.EventHandler(this.gunaCirclePictureBox1_Click);
             // 
-            // gunaButton3
+            // gunaCirclePictureBox2
             // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BaseColor = System.Drawing.Color.Red;
-            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = null;
-            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton3.Location = new System.Drawing.Point(463, 111);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Radius = 8;
-            this.gunaButton3.Size = new System.Drawing.Size(119, 42);
-            this.gunaButton3.TabIndex = 5;
-            this.gunaButton3.Text = "     SİL";
-            this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
+            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaCirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox2.Image")));
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(875, 12);
+            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
+            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(29, 24);
+            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox2.TabIndex = 3;
+            this.gunaCirclePictureBox2.TabStop = false;
+            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
+            this.gunaCirclePictureBox2.Click += new System.EventHandler(this.gunaCirclePictureBox2_Click);
             // 
             // Form2
             // 
@@ -512,6 +528,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(965, 556);
+            this.Controls.Add(this.gunaCirclePictureBox2);
             this.Controls.Add(this.gunaCirclePictureBox1);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaElipsePanel1);
@@ -523,6 +540,7 @@
             this.gunaElipsePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,5 +573,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pament;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaButton gunaButton3;
+        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
     }
 }

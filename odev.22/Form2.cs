@@ -121,6 +121,11 @@ namespace odev._22
                 gunaDataGridView1.Rows.Remove(gunaDataGridView1.CurrentRow);
             }
         }
+
+        private void gunaCirclePictureBox2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
 
