@@ -44,9 +44,9 @@ namespace odev._22
         {
             if (nameCombo.SelectedItem.ToString() == "neskafe")
             {
-                if (typeCombo.SelectedItem.ToString() == "sıcak")
+                if(typeCombo.SelectedItem.ToString()=="sıcak")
                 {
-                    paymentText.Text = (float.Parse(quanityCombo.Text) * 15).ToString();
+                    paymentText.Text = (float.Parse(quanityCombo.Text) * 20).ToString();
                 }
                 if (typeCombo.SelectedItem.ToString() == "soguk")
                 {
@@ -57,14 +57,14 @@ namespace odev._22
                     paymentText.Text = (float.Parse(quanityCombo.Text) * 5).ToString();
 
                 }
-                gunaDataGridView1.Rows.Add(idText.Text, nameCombo.Text, typeCombo.Text, quanityCombo.Text, paymentText.Text);
+                
 
             }
 
              if (nameCombo.SelectedItem.ToString() == "sutlu kahve")
                 if (typeCombo.SelectedItem.ToString() == "sıcak")
                 {
-                    paymentText.Text = (float.Parse(quanityCombo.Text) * 25).ToString();
+                  paymentText.Text = (float.Parse(quanityCombo.Text) * 25).ToString();
                 }
             if (typeCombo.SelectedItem.ToString() == "soguk")
             {
