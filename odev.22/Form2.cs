@@ -30,7 +30,7 @@ namespace odev._22
 
         private void gunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gunaDataGridView1.CurrentRow != null);
+            if (gunaDataGridView1.CurrentRow != null) 
             {
                 idText.Text = gunaDataGridView1.CurrentRow.Cells[0].Value.ToString();
                 nameCombo.Text = gunaDataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -42,6 +42,8 @@ namespace odev._22
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
+            if(nameCombo.SelectedIndex<= -1) return;
+
             if (nameCombo.SelectedItem.ToString() == "neskafe")
             {
                 if(typeCombo.SelectedItem.ToString()=="sıcak")
