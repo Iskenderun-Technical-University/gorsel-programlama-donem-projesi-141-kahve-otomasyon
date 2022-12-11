@@ -42,7 +42,8 @@ namespace odev._22
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            if(nameCombo.SelectedIndex<= -1) return;
+            if (nameCombo.SelectedIndex<= -1) return;
+            if (typeCombo.SelectedIndex <= -1) return;
 
             if (nameCombo.SelectedItem.ToString() == "neskafe")
             {
