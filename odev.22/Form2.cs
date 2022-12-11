@@ -129,6 +129,18 @@ namespace odev._22
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void gunaButton4_Click(object sender, EventArgs e)
+        {
+            if (gunaDataGridView1.CurrentRow != null)
+            {
+                gunaDataGridView1.CurrentRow.Cells[0].Value = idText.Text;
+                gunaDataGridView1.CurrentRow.Cells[1].Value = nameCombo.Text;
+                gunaDataGridView1.CurrentRow.Cells[2].Value = typeCombo.Text;
+                gunaDataGridView1.CurrentRow.Cells[3].Value = quanityCombo.Text;
+                gunaDataGridView1.CurrentRow.Cells[4].Value = paymentText.Text;
+            }
+        }
     }
 }
 
