@@ -24,7 +24,7 @@ namespace odev._22
 
         private void gunaPictureBox1_Click(object sender, EventArgs e)
         {
-
+             
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,12 +26,12 @@ namespace odev._22
         private void gunaComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void gunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gunaDataGridView1.CurrentRow != null) 
+            if (gunaDataGridView1.CurrentRow != null)
             {
                 idText.Text = gunaDataGridView1.CurrentRow.Cells[0].Value.ToString();
                 nameCombo.Text = gunaDataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -42,12 +43,12 @@ namespace odev._22
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            if (nameCombo.SelectedIndex<= -1) return;
+            if (nameCombo.SelectedIndex <= -1) return;
             if (typeCombo.SelectedIndex <= -1) return;
 
             if (nameCombo.SelectedItem.ToString() == "neskafe")
             {
-                if(typeCombo.SelectedItem.ToString()=="sıcak")
+                if (typeCombo.SelectedItem.ToString() == "sıcak")
                 {
                     paymentText.Text = (float.Parse(quanityCombo.Text) * 20).ToString();
                 }
@@ -60,14 +61,14 @@ namespace odev._22
                     paymentText.Text = (float.Parse(quanityCombo.Text) * 5).ToString();
 
                 }
-                
+
 
             }
 
-             if (nameCombo.SelectedItem.ToString() == "sutlu kahve")
+            if (nameCombo.SelectedItem.ToString() == "sutlu kahve")
                 if (typeCombo.SelectedItem.ToString() == "sıcak")
                 {
-                  paymentText.Text = (float.Parse(quanityCombo.Text) * 25).ToString();
+                    paymentText.Text = (float.Parse(quanityCombo.Text) * 25).ToString();
                 }
             if (typeCombo.SelectedItem.ToString() == "soguk")
             {
@@ -100,7 +101,7 @@ namespace odev._22
             }
             gunaDataGridView1.Rows.Add(idText.Text, nameCombo.Text, typeCombo.Text, quanityCombo.Text, paymentText.Text);
         }
-
+       
       
         private void gunaButton2_Click(object sender, EventArgs e)
         {
@@ -139,6 +140,16 @@ namespace odev._22
                 gunaDataGridView1.CurrentRow.Cells[2].Value = typeCombo.Text;
                 gunaDataGridView1.CurrentRow.Cells[3].Value = quanityCombo.Text;
                 gunaDataGridView1.CurrentRow.Cells[4].Value = paymentText.Text;
+            }
+        }
+
+        private void gunaButton5_Click(object sender, EventArgs e)
+        {
+            //((Form)printDocument1).WindowState = FormWindowState.Maximized;
+          //  if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+               // printDocument1.Print();
+
             }
         }
     }
