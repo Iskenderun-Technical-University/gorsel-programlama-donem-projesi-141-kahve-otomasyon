@@ -145,12 +145,48 @@ namespace odev._22
 
         private void gunaButton5_Click(object sender, EventArgs e)
         {
-            //((Form)printDocument1).WindowState = FormWindowState.Maximized;
-          //  if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
+           // ((Form)printDocument1).WindowState = FormWindowState.Maximized;
+            if(printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
-               // printDocument1.Print();
+                printDocument1.Print();
 
             }
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            float margin = 40;
+            Font f= new Font("Arial",18, FontStyle.Bold);
+            string namecofi = "İçeceK Adı" + nameCombo.Text;
+            //string tayp = "" + nameCombo.Text;
+            // string namecofi = "İçeceK Adı" + nameCombo.Text;
+            //string namecofi = "İçeceK Adı" + nameCombo.Text;
+            // e.Graphics.DrawImage(namecofi, f, Brushes.DarkKhaki, e.PageBounds.Left - fontsiz1.Width - margin, margin + fontsiz1.Height+ namecofi.Height);
+            float UZUNLUK = 80;
+            // e.Graphics.DrawRectangle(Pens.Black.mar)
+
+            float colHeight = 60;
+            float colHeight1 = 300;
+            float colHeight2 = 125 + colHeight1;
+            float colHeight3 = 125 + colHeight2;
+            float colHeight4 = 125 + colHeight3;
+            float colHeight5 = 125 + colHeight4;
+
+
+            e.Graphics.DrawLine(Pens.Black, margin, UZUNLUK  + colHeight ,e.PageBounds.Width - margin, UZUNLUK+ colHeight);
+            e.Graphics.DrawString("İskendarun teknik kofi",f,Brushes.Red, e.PageBounds.Width - margin-margin*2 -colHeight2,UZUNLUK);
+
+
+            float rowsHeight = 60;
+            for (int x = 0; x < gunaDataGridView1.Rows.Count; x += 1)
+            {
+                e.Graphics.DrawString(gunaDataGridView1.Rows[x].Cells[1].Value.ToString(), f,Brushes.Navy, e.PageBounds.Width - margin * 2 - colHeight2,UZUNLUK + rowsHeight);
+
+                e.Graphics.DrawString(gunaDataGridView1.Rows[x].Cells[2].Value.ToString(), f, Brushes.Navy, e.PageBounds.Width - margin * 4 - colHeight2, UZUNLUK + rowsHeight);
+                e.Graphics.DrawString(gunaDataGridView1.Rows[x].Cells[3].Value.ToString(), f, Brushes.Navy, e.PageBounds.Width - margin * 6 - colHeight2, UZUNLUK + rowsHeight);
+                e.Graphics.DrawString(gunaDataGridView1.Rows[x].Cells[4].Value.ToString(), f, Brushes.Navy, e.PageBounds.Width - margin * 8- colHeight2, UZUNLUK + rowsHeight);
+            }
+
         }
     }
 }
